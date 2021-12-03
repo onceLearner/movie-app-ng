@@ -1,0 +1,38 @@
+<div class="films">
+ <p>hello world</p>
+    <ng-container *ngFor="let film of films | paginate: { itemsPerPage: 5, currentPage: page }">
+
+
+
+      
+
+        <div class="film" (click)="openFilmDetails(film.id)">
+
+        
+            <div class="film-img-container">
+                <img
+                  style="width: 100%; object-fit: cover;"
+                src="{{ film.poster_path }}"
+                class="film-image" alt="">
+                
+            </div>
+    
+            <div class="film-description">
+                <p class="film-name">{{ film.title }}</p>
+    
+               
+                
+            </div>
+    
+           
+        </div>
+
+
+
+        
+    
+        
+       
+    </ng-container>
+
+</div >
